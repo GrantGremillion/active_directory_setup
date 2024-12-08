@@ -20,10 +20,10 @@ This tutorial outlines the setup of Active Directory within Azure Virtual Machin
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create Resource Group, and Vnet
+- Create Domain Controller VM
+- Create Client VM
+- Configuration Steps / Testing
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -88,7 +88,24 @@ Now, to apply the changes, restart the client vm:
 ![image](https://github.com/user-attachments/assets/ba3dbb06-76b4-41b0-8b19-f8c11dd1d9b0)
 
 <p>
-To finish the first part of this walkthrough, we need to remote into the client VM and attempt to ping the domain controller to make sure the setup is working as expected. After opening the connection, open up the command prompt and ping the private IP address of the domain controller.
+We will need to disable the firewall in the domain controller for the purposes of this lab. To do so, remote into the domain controller. Then, Use the Run program and enter "wf.msc" to access the Windows Firewall. Next, right click "Windows Defender Firewall with Advanced Security on Local Computer" > Properties > Under all tabs, make sure the firewall state is set to Off > Apply > Ok.
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/6e71dc40-9bc5-4ae0-ac84-d2d3d5ad7b7a)
+
+![image](https://github.com/user-attachments/assets/dd8721ab-0083-427a-b2a6-e6130c1b44a4)
+
+<p>
+To finish the first part of this walkthrough, we need to remote into the client VM and attempt to ping the domain controller to make sure the setup is working as expected. After opening the connection, open up the command prompt and ping the private IP address of the domain controller. Then, run the command ipconfig /all to check the DNS server for the client VM. The DNS server should be listed with the private IP of our domain controller:
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/8e868f12-bef7-4cd7-ba62-bbec75111bbd)
+
+
+<p>
+We are finished with the setup portion of this walkthrough. Good job!
 </p>
 <br />
 
