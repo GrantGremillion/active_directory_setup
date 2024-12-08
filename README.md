@@ -25,7 +25,7 @@ This tutorial outlines the setup of Active Directory within Azure Virtual Machin
 - Create Client VM
 - Configuration Steps / Testing
 
-<h2>Deployment and Configuration Steps</h2>
+<h2>Creating Resource Group + VNet</h2>
 
 ![image](https://github.com/user-attachments/assets/aa89f2bf-e166-4c60-b116-f98d482fa804)
 
@@ -33,6 +33,8 @@ This tutorial outlines the setup of Active Directory within Azure Virtual Machin
 To start our walkthrough, we will create a resource group that will hold our virtual network with a Domain Controller Server and a Client Server. You can name the resource group anything. I will name mine "Active_Directory_Walkthrough" for the sake of the tutorial. In my case, I am setting the region as Canada Central. Leave everything else as default values.
 </p>
 <br />
+
+<h2>Creating Domain Controler</h2>
 
 ![image](https://github.com/user-attachments/assets/4035f787-0d2d-4eb5-bf60-328e266e709c)
 
@@ -57,12 +59,16 @@ After you are ready, click review + create and then Create.
 </p>
 <br />
 
+<h2>Creating Client</h2>
+
 ![image](https://github.com/user-attachments/assets/a30f4ac2-bd7a-4733-bd82-14bd6ddb43c7)
 
 <p>
 Now, we need to create the Client VM. Use the exact same options as in the Domain Controller aside from the image being Windows 10 Pro.
 </p>
 <br />
+
+<h2>Configuration Steps for VM's</h2>
 
 ![image](https://github.com/user-attachments/assets/2b884234-117f-4d17-9269-c62c0b3769ab)
 
